@@ -1,0 +1,72 @@
+HorizontalLayoutWidgetClass {
+ Name "AudioSettings"
+ components {
+  SCR_InterfaceSettings "{59714691286D6530}" {
+   m_menuTypes {
+    SCR_InterfaceMenuContent "{597146912A40DC73}" {
+     m_ElementLayout "{8170DE93810F928A}UI/layouts/HUD/WeaponInfo/WeaponInfo.layout"
+    }
+   }
+  }
+ }
+ {
+  ScrollLayoutWidgetClass "{59714690C2D1C5B0}" {
+   Name "ScrollLayout0"
+   Slot LayoutSlot "{54890CCF4EB5C47F}" {
+    Padding 80 0 0 0
+    SizeMode Fill
+    FillWeight 0.5
+   }
+   Color 0.761 0.392 0.078 1
+   {
+    VerticalLayoutWidgetClass "{59714690C2D1C5A7}" {
+     Name "Content"
+     Slot AlignableSlot "{54890CCE9D51A05E}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding -4 0 10 0
+     }
+     {
+      VerticalLayoutWidgetClass "{59714690C2D1C5A5}" : "{FEEEB639F2735BA1}UI/layouts/Menus/SettingsMenu/CustomWidgets/SettingsTitle.layout" {
+       Name "TitleGeneral"
+       Slot LayoutSlot "{58B32278C99818F2}" {
+       }
+       components {
+        SCR_LabelComponent "{58B30C1A8E56F0FF}" {
+         m_sLabel "#AR-Settings_Title_General"
+        }
+       }
+       {
+       }
+      }
+     }
+    }
+   }
+  }
+  ScrollLayoutWidgetClass "{59714691CE406553}" {
+   Name "ScrollLayout1"
+   Slot LayoutSlot "{54890CCF4EB5C47F}" {
+    Padding 20 0 0 0
+    SizeMode Fill
+    FillWeight 1
+   }
+   Color 0.761 0.392 0.078 1
+   {
+    VerticalLayoutWidgetClass "{59714691CE406552}" {
+     Name "Content"
+     Slot AlignableSlot "{54890CCE9D51A05E}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding -4 0 10 0
+     }
+    }
+   }
+  }
+  VerticalLayoutWidgetClass "{59714690C2D1C59E}" {
+   Name "Description"
+   Slot LayoutSlot "{54890CCA1EA23AC0}" {
+    SizeMode Fill
+   }
+  }
+ }
+}
