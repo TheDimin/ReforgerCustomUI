@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{17B7D939BC62FA5A}UI/layouts/Menus/SettingsMenu/ElementContextMenu.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,71 +1,147 @@
-HorizontalLayoutWidgetClass {
- Name "AudioSettings"
+OverlayWidgetClass {
+ Name "Frame0"
  components {
-  SCR_InterfaceSettings "{59714691286D6530}" {
-   m_menuTypes {
-    SCR_InterfaceMenuContent "{597146912A40DC73}" {
-     m_ElementLayout "{8170DE93810F928A}UI/layouts/HUD/WeaponInfo/WeaponInfo.layout"
+  SCR_InterfaceSettings "{597A8B3082421F93}" {
+   m_MenuTypes {
+    SCR_InterfaceMenuContent "{597A8B30FB74675F}" {
+     m_DisplayName "WeaponHUD"
+     m_Layout "{8170DE93810F928A}UI/layouts/HUD/WeaponInfo/WeaponInfo.layout"
+     m_bindings {
+      MenuBinding "{597AB8D2952550ED}" {
+       m_Element "Frame0.m_WeaponInfoPanel.m_Optics"
+       m_BindMask Color
+      }
+      MenuBinding "{597B3B728EFC8131}" {
+       m_Element "Frame0.m_WeaponInfoPanel.m_Zeroing"
+      }
+      MenuBinding "{597B3B7287433031}" {
+       m_Element "Frame0.m_WeaponInfoPanel.m_AmmoType"
+      }
+      MenuBinding "{597B3B72FBD7EDE6}" {
+       m_Element "Frame0.m_WeaponInfoPanel.m_Main"
+      }
+     }
+    }
+    SCR_InterfaceMenuContent "{597B3B76AA3F2200}" {
+     m_DisplayName "ActionMenu"
+     m_Layout "{F2B2EB0B4DB2ADB1}UI/layouts/HUD/InteractionSystem/ActionMenuLayout.layout"
+     m_bindings {
+      MenuBinding "{597B3B76CBE8A0D2}" {
+       m_Element "ActionButton.ActionButtonRight.Button.ActionKey"
+       m_BindMask Color
+      }
+     }
     }
    }
   }
  }
  {
-  ScrollLayoutWidgetClass "{59714690C2D1C5B0}" {
-   Name "ScrollLayout0"
-   Slot LayoutSlot "{54890CCF4EB5C47F}" {
-    Padding 80 0 0 0
-    SizeMode Fill
-    FillWeight 0.5
+  HorizontalLayoutWidgetClass "{5979182E11AEC460}" {
+   Name "InterfaceSettings"
+   Slot OverlayWidgetSlot "{5979182E11AEC474}" {
+    HorizontalAlign 3
+    VerticalAlign 3
    }
-   Color 0.761 0.392 0.078 1
    {
-    VerticalLayoutWidgetClass "{59714690C2D1C5A7}" {
-     Name "Content"
-     Slot AlignableSlot "{54890CCE9D51A05E}" {
-      HorizontalAlign 3
-      VerticalAlign 3
-      Padding -4 0 10 0
+    ScrollLayoutWidgetClass "{59714690C2D1C5B0}" {
+     Name "ScrollLayout0"
+     Slot LayoutSlot "{54890CCF4EB5C47F}" {
+      VerticalAlign 0
+      Padding 80 0 0 0
+      SizeMode Fill
+      FillWeight 1
      }
+     Color 0.761 0.392 0.078 1
      {
-      VerticalLayoutWidgetClass "{59714690C2D1C5A5}" : "{FEEEB639F2735BA1}UI/layouts/Menus/SettingsMenu/CustomWidgets/SettingsTitle.layout" {
+      VerticalLayoutWidgetClass "{59714690C2D1C5A7}" {
+       Name "Content"
+       Slot AlignableSlot "{54890CCE9D51A05E}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 0 0 -10 0
+       }
+       {
+        VerticalLayoutWidgetClass "{59714690C2D1C5A5}" : "{FEEEB639F2735BA1}UI/layouts/Menus/SettingsMenu/CustomWidgets/SettingsTitle.layout" {
+         Name "TitleGeneral"
+         Slot LayoutSlot "{58B32278C99818F2}" {
+         }
+         components {
+          SCR_LabelComponent "{58B30C1A8E56F0FF}" {
+           m_sLabel "#AR-Settings_Title_Menus"
+          }
+         }
+         {
+          TextWidgetClass "{58B30C1F77EC7B4E}" {
+           Prefab "{58B30C1F77EC7B4E}"
+           Slot LayoutSlot "{58B30C1F77EC7B76}" {
+            HorizontalAlign 1
+            VerticalAlign 1
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    VerticalLayoutWidgetClass "{597AB8E014D3C7A3}" : "{17B7D939BC62FA5A}UI/layouts/Menus/SettingsMenu/ElementContextMenu.layout" {
+     Name "ContextMenu"
+     Slot LayoutSlot "{597B11528F9E9DAD}" {
+      VerticalAlign 0
+      Padding 10 80 10 0
+      SizeMode Fill
+     }
+     components {
+     }
+     "Fill Origin" Top
+     {
+      VerticalLayoutWidgetClass "{597B1152CEC8F1D0}" : "{FEEEB639F2735BA1}UI/layouts/Menus/SettingsMenu/CustomWidgets/SettingsTitle.layout" {
        Name "TitleGeneral"
        Slot LayoutSlot "{58B32278C99818F2}" {
        }
        components {
         SCR_LabelComponent "{58B30C1A8E56F0FF}" {
-         m_sLabel "#AR-Settings_Title_General"
+         m_sLabel "#AR-Settings_Title_Options"
         }
+       }
+       {
+        TextWidgetClass "{58B30C1F77EC7B4E}" {
+         Prefab "{58B30C1F77EC7B4E}"
+         Slot LayoutSlot "{58B30C1F77EC7B76}" {
+          HorizontalAlign 1
+          VerticalAlign 1
+         }
+        }
+       }
+      }
+      VerticalLayoutWidgetClass "{597B1154FEAE9C02}" {
+       Prefab "{597B1154FEAE9C02}"
+       Slot LayoutSlot "{597B1154FEAE9C76}" {
+        SizeMode Auto
        }
        {
        }
       }
      }
     }
-   }
-  }
-  ScrollLayoutWidgetClass "{59714691CE406553}" {
-   Name "ScrollLayout1"
-   Slot LayoutSlot "{54890CCF4EB5C47F}" {
-    Padding 20 0 0 0
-    SizeMode Fill
-    FillWeight 1
-   }
-   Color 0.761 0.392 0.078 1
-   {
-    VerticalLayoutWidgetClass "{59714691CE406552}" {
-     Name "Content"
-     Slot AlignableSlot "{54890CCE9D51A05E}" {
-      HorizontalAlign 3
-      VerticalAlign 3
-      Padding -4 0 10 0
+    OverlayWidgetClass "{5979182F1E4EF597}" {
+     Name "ElementSlot"
+     Slot LayoutSlot "{597A93148A852963}" {
+      SizeMode Fill
+      FillWeight 8
+     }
+     {
+      BlurWidgetClass "{597A9313EB84E6DC}" {
+       Name "Blur0"
+       Slot OverlayWidgetSlot "{597A9313EB84E632}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.521 0.521 0.521 1
+       Intensity 0.1
+      }
      }
     }
-   }
-  }
-  VerticalLayoutWidgetClass "{59714690C2D1C59E}" {
-   Name "Description"
-   Slot LayoutSlot "{54890CCA1EA23AC0}" {
-    SizeMode Fill
    }
   }
  }

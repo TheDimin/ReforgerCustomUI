@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{F42BFAA206C827D8}UI/layouts/Menus/SettingsMenu/ContextColorEntry.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

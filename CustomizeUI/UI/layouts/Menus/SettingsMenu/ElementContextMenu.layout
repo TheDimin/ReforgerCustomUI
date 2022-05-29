@@ -1,0 +1,34 @@
+VerticalLayoutWidgetClass {
+ Name "ContextMenu"
+ components {
+  SCR_ElementContextMenu "{597B3B7E68EB4A9D}" {
+  }
+ }
+ {
+  VerticalLayoutWidgetClass "{597B1154FEAE9C02}" : "{F42BFAA206C827D8}UI/layouts/Menus/SettingsMenu/ContextColorEntry.layout" {
+   Name "ColorPicker"
+   Slot LayoutSlot "{597B1154FEAE9C76}" {
+   }
+   {
+   }
+  }
+  ButtonWidgetClass "{597B3B78B799B9F0}" {
+   Name "ApplyButton"
+   Slot LayoutSlot "{597B3B78B799B9E8}" {
+   }
+   components {
+    SCR_ButtonBaseComponent "{597B3B7FE3F2D932}" {
+    }
+   }
+   {
+    TextWidgetClass "{597B3B78B06C719A}" {
+     Name "Text0"
+     Slot ButtonWidgetSlot "{597B3B78B06C71F8}" {
+     }
+     Color 0 0 0 1
+     Text "Apply"
+    }
+   }
+  }
+ }
+}

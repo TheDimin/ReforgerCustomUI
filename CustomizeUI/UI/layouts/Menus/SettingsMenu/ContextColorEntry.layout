@@ -1,0 +1,126 @@
+VerticalLayoutWidgetClass {
+ Name "ColorPicker"
+ components {
+  SCR_ColorPickerComponent "{597B115EADBC55EE}" {
+  }
+ }
+ {
+  HorizontalLayoutWidgetClass "{597B1158ADC56A45}" {
+   Name "rootFrame"
+   Slot LayoutSlot "{597B115B112EB38A}" {
+    FillWeight 4
+   }
+   {
+    VerticalLayoutWidgetClass "{597B1154E08BFA47}" {
+     Name "Titles"
+     Slot LayoutSlot "{597B1154E08BFBBB}" {
+      HorizontalAlign 0
+      Padding 0 0 0 0
+     }
+     {
+      TextWidgetClass "{597B1154E2492DA5}" {
+       Name "Red"
+       Slot LayoutSlot "{597B1154E2492D9E}" {
+        HorizontalAlign 1
+        Padding 0 4 0 0
+       }
+       Text "Red"
+      }
+      TextWidgetClass "{597B115A95726E3B}" {
+       Name "Green"
+       Slot LayoutSlot "{597B1154E2492D9E}" {
+        HorizontalAlign 1
+        Padding 0 8 0 0
+       }
+       Text "Green"
+      }
+      TextWidgetClass "{597B115A9494E543}" {
+       Name "Blue"
+       Slot LayoutSlot "{597B1154E2492D9E}" {
+        HorizontalAlign 1
+        Padding 0 8 0 0
+       }
+       Text "Blue"
+      }
+     }
+    }
+    VerticalLayoutWidgetClass "{597B115A95726E3C}" {
+     Name "Sliders"
+     Slot LayoutSlot "{597B1154E08BFBBB}" {
+      Padding 4 0 4 0
+      SizeMode Fill
+      FillWeight 1
+     }
+     {
+      SliderWidgetClass "{597B1154DE605AF5}" {
+       Name "Red"
+       Slot LayoutSlot "{597B1154DE605AD3}" {
+        Padding 0 0 0 0
+       }
+       Size 150 32
+       maximum 1
+       step 0.01
+       current 0
+      }
+      SliderWidgetClass "{597B115A95726E3A}" {
+       Name "Green"
+       Slot LayoutSlot "{597B1154DE605AD3}" {
+        Padding 0 0 0 0
+       }
+       Size 150 32
+       maximum 1
+       step 0.01
+       current 0
+      }
+      SliderWidgetClass "{597B115A9494E541}" {
+       Name "Blue"
+       Slot LayoutSlot "{597B1154DE605AD3}" {
+        Padding 0 0 0 0
+       }
+       Size 150 32
+       maximum 1
+       step 0.01
+       current 0
+      }
+     }
+    }
+    VerticalLayoutWidgetClass "{597B115A9494E544}" {
+     Name "EditBoxs"
+     Slot LayoutSlot "{597B1154E08BFBBB}" {
+      HorizontalAlign 0
+     }
+     "Is Visible" 0
+     {
+      EditBoxWidgetClass "{597B115A95726E39}" {
+       Name "EditBox0"
+       Slot LayoutSlot "{597B115432DF78E0}" {
+        HorizontalAlign 1
+        Padding 0 4 0 0
+       }
+       text "000"
+       "Horizontal alignment" Center
+      }
+      EditBoxWidgetClass "{597B115432DF788D}" {
+       Name "EditBox1"
+       Slot LayoutSlot "{597B115432DF78E0}" {
+        HorizontalAlign 1
+        Padding 0 8 0 0
+       }
+       text "000"
+       "Horizontal alignment" Center
+      }
+      EditBoxWidgetClass "{597B115A9494E540}" {
+       Name "EditBox"
+       Slot LayoutSlot "{597B115432DF78E0}" {
+        HorizontalAlign 1
+        Padding 0 8 0 0
+       }
+       text "000"
+       "Horizontal alignment" Center
+      }
+     }
+    }
+   }
+  }
+ }
+}

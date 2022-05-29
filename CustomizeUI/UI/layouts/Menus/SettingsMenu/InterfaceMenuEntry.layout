@@ -1,0 +1,43 @@
+ButtonWidgetClass {
+ Name "rootFrame"
+ Color 1 1 1 0
+ components {
+  SCR_ButtonTextComponent "{59730CC887866AF7}" {
+   m_bCanBeToggled 1
+   m_sText "Test"
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5971469429BA3968}" {
+   Name "SizeLayout0"
+   Slot ButtonWidgetSlot "{5971469429BA26B3}" {
+    HorizontalAlign 3
+   }
+   {
+    OverlayWidgetClass "{597146940B094780}" {
+     Name "Overlay0"
+     Slot ButtonWidgetSlot "{597146940B0947D6}" {
+      HorizontalAlign 3
+     }
+     {
+      ImageWidgetClass "{5974B2863DB50A64}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{5974B2863DB50A5C}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+      }
+      TextWidgetClass "{59714694AE65A1C3}" {
+       Name "Text"
+       Slot OverlayWidgetSlot "{597146940B1F2549}" {
+        Padding 0 20 0 20
+       }
+       "Font Size" 20
+       "Min Font Size" 20
+      }
+     }
+    }
+   }
+  }
+ }
+}
