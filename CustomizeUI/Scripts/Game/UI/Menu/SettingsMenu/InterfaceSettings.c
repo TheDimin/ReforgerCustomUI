@@ -1,8 +1,6 @@
 //------------------------------------------------------------------------------------------------
 class SCR_InterfaceSettings : SCR_SettingsSubMenuBase
 {
-	[Attribute("", UIWidgets.Object, "")]
-	protected ref array<ref SCR_InterfaceMenuContent> m_MenuTypes;
 	protected ScrollLayoutWidget m_wScrollElements;
 	protected Widget m_ContentOverlay;
 	
@@ -31,7 +29,10 @@ class SCR_InterfaceSettings : SCR_SettingsSubMenuBase
 		
 		m_MenuBindings.Clear();
 		
-		foreach(SCR_InterfaceMenuContent resource: m_MenuTypes)
+		SCR_UICore uiCore = SCR_UICore.Cast(SCR_UICore.GetInstance(SCR_UICore));
+
+		
+		foreach(SCR_InterfaceMenuContent resource: uiCore.m_EditableMenus)
 		{
 			SetupMenuButton(resource);
 			
@@ -120,33 +121,3 @@ class SCR_InterfaceSettings : SCR_SettingsSubMenuBase
 	
 
 };
-
-enum EBindtype
-{
-	Move = 1 ,
-	Scale = 1 << 1,
-	Color = 1 << 2
-}
-
-[BaseContainerProps(), BaseContainerCustomTitleField("m_Element")]
-class MenuBinding : Managed
-{
-	[Attribute()]
-	string m_Element;
-	[Attribute("", UIWidgets.Flags, enums: ParamEnumArray.FromEnum(EBindtype))]
-	EBindtype m_BindMask;
-}
-
-[BaseContainerProps(), BaseContainerCustomTitleField("m_DisplayName")]
-class SCR_InterfaceMenuContent : Managed
-{
-	[Attribute("None")]
-	string m_DisplayName;
-	
-	[Attribute("", UIWidgets.ResourceNamePicker, "Layout element used", "layout")]
-	ResourceName m_Layout;
-	
-	[Attribute("", UIWidgets.Object, "")]
-	ref array<ref MenuBinding> m_bindings;
-
-}

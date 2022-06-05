@@ -19,6 +19,7 @@ class SCR_ColorPickerComponent : ScriptedWidgetComponent
 		m_SliderWidget[0] = SliderWidget.Cast(sl.FindWidget("Red")); 
 		m_SliderWidget[1] = SliderWidget.Cast(sl.FindWidget("Green")); 
 		m_SliderWidget[2] = SliderWidget.Cast(sl.FindWidget("Blue")); 
+
 	}
 	
 	bool TickFromOwner()
@@ -31,9 +32,6 @@ class SCR_ColorPickerComponent : ScriptedWidgetComponent
 		SetColor(m_SliderWidget[0].GetCurrent(),
 				m_SliderWidget[1].GetCurrent(),
 				m_SliderWidget[2].GetCurrent());
-		
-		
-			Print("test");
 		
 		return true;
 	}

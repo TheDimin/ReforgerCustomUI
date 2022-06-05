@@ -48,8 +48,7 @@ class InterfaceMenuBinding : Managed
 			}
 			
 			
-			EditElementComponent editComponent = new EditElementComponent();
-			editComponent.m_BindMask = binding.m_BindMask;
+			EditElementComponent editComponent = new EditElementComponent(binding);
 			m_OnComponentCreated.Invoke(editComponent);
 			w.AddHandler(editComponent);
 		}

@@ -20,7 +20,7 @@ class SCR_ElementContextMenu : ScriptedWidgetComponent
 	void OnApplyPressed()
 	{
 		m_ActiveEditComponent.SetColor(m_ColorPicker.GetColor());
-		
+		m_ActiveEditComponent.Save();
 		Disable();
 	}
 	
