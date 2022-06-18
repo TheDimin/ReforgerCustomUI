@@ -37,7 +37,7 @@ class SCR_InterfaceSettings : SCR_SettingsSubMenuBase
 			SetupMenuButton(resource);
 			
 		}
-		
+		if(m_MenuBindings.IsEmpty()) return;
 		//Hack to trigger it enabled
 		m_MenuBindings.Get(0).Open();
 		m_ActiveMenu = m_MenuBindings.Get(0);
@@ -58,7 +58,6 @@ class SCR_InterfaceSettings : SCR_SettingsSubMenuBase
 		if (!button)
 		{
 			Print("Failed to create button");
-
 			return;
 		}
 

@@ -25,8 +25,9 @@ class UICustomizeComponent : SCR_ScriptedWidgetComponent
 	
 	void Load()
 	{
-		auto e = GetGame().tm.Get(m_binding.m_Element);
-		if(e)
-		SetColor(e.elementColor)
+		
+	//	auto e = GetGame().tm.Get(m_binding.m_Element);
+		if(m_binding.m_Save)
+			SetColor(m_binding.m_Save.m_Color)
 	}
 }

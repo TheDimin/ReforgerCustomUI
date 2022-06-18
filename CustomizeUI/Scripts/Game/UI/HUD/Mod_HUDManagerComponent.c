@@ -9,7 +9,7 @@ modded class SCR_HUDManagerComponent : HUDManagerComponent
 		
 		if(createdWidget)
 		{
-		
+			SCR_UICore.Cast(SCR_UICore.GetInstance(SCR_UICore)).BindPanel(createdWidget,path);
 		}
 		
 		return createdWidget;

@@ -38,20 +38,9 @@ class InterfaceMenuBinding : Managed
 		
 		m_OnBindingActived.Invoke(this);
 		
-		foreach(MenuBinding binding: m_MenuContent.m_bindings)
-		{
-			Widget w = m_WidgetInstance.FindWidget(binding.m_Element);
-			if(!w)
-			{
-				Print("Invalid binding: " + binding.m_Element ,LogLevel.FATAL);
-				return;
-			}
-			
-			
-			EditElementComponent editComponent = new EditElementComponent(binding);
-			m_OnComponentCreated.Invoke(editComponent);
-			w.AddHandler(editComponent);
-		}
+		SCR_UICore.Cast(SCR_UICore.GetInstance(SCR_UICore)).BindElements(m_WidgetInstance,m_MenuContent.m_Bindings,m_OnComponentCreated);
+		
+		
 	}
 	
 	void Close()

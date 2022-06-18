@@ -1,43 +1,4 @@
-class UISettings: ModuleGameSettings
-{
-	[Attribute()]
-	ref array<ref UIElementSettings> arrayelm;
-	
-	static void SaveArray(notnull TUIElementMap maped)
-	{
-		UISettings settings = new UISettings;
-		BaseContainerTools.WriteToInstance(settings, GetGame().GetGameUserSettings().GetModule("UISettings"));
-	
-		ref array<ref UIElementSettings> t ={};
-		
-		foreach ( auto itt : maped)
-		{
-			t.Insert(itt);
-		}
-		settings.arrayelm = t;	
-	
-	
-		BaseContainerTools.ReadFromInstance(settings, GetGame().GetGameUserSettings().GetModule("UISettings"));
-		
-		// notify system about change
-		GetGame().UserSettingsChanged(); // -> here is also OnSpeedChanged() called
-		GetGame().SaveUserSettings();
-	}
-	
-	static void LoadArray(out TUIElementMap mapped)
-	{
-		mapped = new TUIElementMap();
-		
-		UISettings settings = new UISettings;
-		BaseContainerTools.WriteToInstance(settings, GetGame().GetGameUserSettings().GetModule("UISettings"));
-	
-		foreach ( UIElementSettings setting : settings.arrayelm)
-		{
-			mapped.Insert(setting.Key,setting);
-		}
-	}
-	
-}
+
 
 class EditElementComponent : UICustomizeComponent
 {
@@ -67,11 +28,22 @@ class EditElementComponent : UICustomizeComponent
 	
 	void Save()
 	{
-		UIElementSettings us = new UIElementSettings();
-		us.Key = m_binding.m_Element;
-		us.elementColor = GetColor();
+		SCR_UICore uiCore = SCR_UICore.Cast(SCR_UICore.GetInstance(SCR_UICore));
+		if(!m_binding.m_Save)
+		{
+			m_binding.m_Save = new UIElementSave();
+			m_binding.m_Save.m_Path = m_binding.m_Element;
+		}
 		
-		GetGame().tm.Insert(m_binding.m_Element,us);
-		UISettings.SaveArray(GetGame().tm);
+		m_binding.m_Save.m_Color = GetColor();
+		
+		uiCore.SaveUIEdits();
+		
+		//UIElementSettings us = new UIElementSettings();
+	//	us.Key = m_binding.m_Element;
+	//	us.elementColor = GetColor();
+		
+	//	GetGame().tm.Insert(m_binding.m_Element,us);
+	//	UISettings.SaveArray(GetGame().tm);
 	}	
 }
