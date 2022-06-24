@@ -26,6 +26,8 @@ class MenuBinding : Managed
 	EBindtype m_BindMask;
 	
 	ref UIElementSave m_Save;
+	
+	ref ScriptInvoker m_OnValueChanged = new ScriptInvoker();
 }
 
 [BaseContainerProps(), BaseContainerCustomTitleField("m_DisplayName")]
@@ -82,8 +84,6 @@ class UISettings: ModuleGameSettings
 	
 		//Terrible oN operation... Find something better for this..
 		
-		//Print("SaveElementCount:"+ settings.arrayelm.Count());
-		
 		foreach(SCR_InterfaceMenuContent menuContent : DataElements)
 		{
 			//Print("SCR_InterfaceMenuContent::" + menuContent.m_Bindings.Count());
@@ -101,9 +101,6 @@ class UISettings: ModuleGameSettings
 						break;
 					}
 				}
-				
-			//	if(found)
-					//break;
 			}
 		}
 		

@@ -36,14 +36,7 @@ class EditElementComponent : UICustomizeComponent
 		}
 		
 		m_binding.m_Save.m_Color = GetColor();
-		
+		m_binding.m_OnValueChanged.Invoke();
 		uiCore.SaveUIEdits();
-		
-		//UIElementSettings us = new UIElementSettings();
-	//	us.Key = m_binding.m_Element;
-	//	us.elementColor = GetColor();
-		
-	//	GetGame().tm.Insert(m_binding.m_Element,us);
-	//	UISettings.SaveArray(GetGame().tm);
 	}	
 }

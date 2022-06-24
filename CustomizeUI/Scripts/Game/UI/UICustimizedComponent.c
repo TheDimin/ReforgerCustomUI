@@ -5,6 +5,13 @@ class UICustomizeComponent : SCR_ScriptedWidgetComponent
     void UICustomizeComponent(notnull MenuBinding MBinding)
 	{
 		m_binding = MBinding;
+		m_binding.m_OnValueChanged.Insert(OnValueChanged);
+	}
+	
+	
+	void OnValueChanged()
+	{
+		SetColor(m_binding.m_Save.m_Color);
 	}
 	
 	override void HandlerAttached(Widget w)
